@@ -1,6 +1,8 @@
 - name: create an ubuntu instance on EC2
   hosts: localhost
   tasks:
+  - name: read vault variables
+    include_vars: myfile
   - name: start the instance
     ec2:
       aws_access_key: KEYXXXX
